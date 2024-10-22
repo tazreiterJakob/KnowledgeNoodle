@@ -28,4 +28,4 @@ A simple AI-Tutor
 ### Commits
 - frequent commits
 - one topic/change per commit
-- messages start with lower-case, no period
+- commit-messages start with lower-case, no period at the end
