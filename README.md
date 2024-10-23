@@ -1,6 +1,9 @@
 # KnowledgeNoodle
 A simple AI-Tutor
 
+![logo](/logo_KnowledgeNoodle.jpg)
+
+
 [Trello-Board](https://trello.com/b/f0EG87VE/knowledgenoodle)
 
 
