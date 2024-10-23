@@ -1,0 +1,22 @@
+body{
+
+}
+#headerNav{
+    display: flex;
+    position: fixed;
+}
+#leftNavContainer{
+    display: flex;
+}
+#leftNavContainer > a > img{
+    border-radius: 50%;
+}
+#rightNavContainer > ul{
+    display: flex;
+    list-style-type: none;
+}
+#rightNavContainer > ul > li > a{
+    text-decoration: none;
+}
+
+  
