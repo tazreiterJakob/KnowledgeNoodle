@@ -7,7 +7,7 @@ A simple AI-Tutor
 ## Team Members
 - Brandstetter Fabian ([@BrandstetterFabian](https://github.com/BrandstetterFabian)) - Frontend
 - Schmölz Felix ([@schmoelzFelix](https://github.com/schmoelzFelix)) - Backend
-- Tazreiter Jakob ([@tazreiterJakob](https://github.com/tazreiterJakob)) - Backend
+- Tazreiter Jakob ([@tazreiterJakob](https://github.com/tazreiterJakob)) - Backend, Repo
 - Wieser Jonas ([@JonasWieser](https://github.com/JonasWieser)) - Frontend
 
 
