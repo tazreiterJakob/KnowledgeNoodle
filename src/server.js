@@ -1,17 +1,21 @@
-let http = require('http');
-let fs = require('fs');
+let http = require('http'),
+    fs = require('fs');
 
-PAGE = "placeholder";
+const MAINPAGE = "index.html";
+PAGE = MAINPAGE;
+
 function handleRequest(req,res)
 {
     console.log("got request!");
     console.log(req.url);
 
-    if(req.url == "/")PAGE = "placeholder";
-    else PAGE = req.url.replace('/','');
-    
-    let content = fs.readFileSync("pages/"+PAGE+".html");
+    if(req.url == "/")req.url = "/"+MAINPAGE;
+    PAGE = req.url;
+   
+    let content = fs.readFileSync("pages"+PAGE);
     res.write(content);
+
+
     res.end();
 }
 
