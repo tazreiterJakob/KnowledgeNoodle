@@ -8,8 +8,12 @@ body{
 #leftNavContainer{
     display: flex;
 }
-#leftNavContainer > a > img{
+#logo{
     border-radius: 50%;
+    height: 60%;
+}
+#leftNavContainer > a{
+    text-decoration: none;
 }
 #rightNavContainer > ul{
     display: flex;
