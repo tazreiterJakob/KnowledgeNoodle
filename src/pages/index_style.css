@@ -1,7 +1,8 @@
 #firstArticle{
     display: flex;
     justify-content: space-between;
-    margin-top: 5%
+    margin-top: 5%;
+    margin-left: 1%;
 }
 #teaserSection > a > button{
     background-color: transparent;
