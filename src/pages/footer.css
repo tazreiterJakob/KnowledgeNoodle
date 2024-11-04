@@ -1,0 +1,9 @@
+#footerul{
+    width: 90vw;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #09ad09;
+    padding: 5vh 5vw 5vh 5vw;
+}
