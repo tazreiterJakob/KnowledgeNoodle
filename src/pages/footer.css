@@ -6,8 +6,8 @@
     justify-content: space-around;
     background-color: rgb(240, 243, 248);
     padding: 3vh 3vw 3vh 3vw;
-    position: absolute;
-    bottom: 0.5rem;
+    bottom: 0rem;
+    
     border-radius: 2em;
     height: fit-content	;
 }
