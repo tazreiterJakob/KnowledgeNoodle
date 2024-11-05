@@ -1,0 +1,25 @@
+#footer{
+    width: 92.5vw;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(240, 243, 248);
+    padding: 3vh 3vw 3vh 3vw;
+    bottom: 0rem;
+    margin-top: 2rem;
+    border-radius: 2em;
+    height: fit-content	;
+}
+#footer > div > a{
+    text-decoration: none; 
+    font-size: 105%;
+    margin-left: 2%;
+    padding: 0.5%;
+    transition: padding-top 0.3s, text-decoration 0.3s;
+    color: black;
+    font-weight: bold;
+}
+#footer > div > a:hover{
+    text-decoration: underline;
+}

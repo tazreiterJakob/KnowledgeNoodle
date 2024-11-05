@@ -20,6 +20,7 @@
 }
 #teaserSection > a > button:hover{
     background-color: rgb(81,1,255);
+    background-color: rgb(81,1,255);;
     color: white;
 }
 #teaserSection > a > button:hover #arrowImg{

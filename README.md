@@ -1,6 +1,9 @@
 # KnowledgeNoodle
 A simple AI-Tutor
 
+![logo](/logo_KnowledgeNoodle.jpg)
+
+
 [Trello-Board](https://trello.com/b/f0EG87VE/knowledgenoodle)
 
 
@@ -14,11 +17,13 @@ A simple AI-Tutor
 ## Conventions
 - (based on) GitHub-Flow
 - use english if possible
+- no commits on main (except README, ...)
 
 ### Files
 - all code is stored in the src/-directory
-- pages are stored in the src/pages/-directory
-- globaly used media is stored in the src/media/-directory
+- all files that are available publicly via the webserver are stored in the src/pages-directory
+    - the paths in it are identical to the public paths o the webserver (src/pages/example.html = ourdomain.com/example.html)
+- global media-files are stored in src/pages/media
 
 ### Branches
 - feature: feature/[nameOfFeature]
