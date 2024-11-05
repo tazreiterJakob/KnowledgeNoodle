@@ -7,7 +7,7 @@
     background-color: rgb(240, 243, 248);
     padding: 3vh 3vw 3vh 3vw;
     bottom: 0rem;
-    
+    margin-top: 2rem;
     border-radius: 2em;
     height: fit-content	;
 }
@@ -21,6 +21,5 @@
     font-weight: bold;
 }
 #footer > div > a:hover{
-    
     text-decoration: underline;
 }
