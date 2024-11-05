@@ -1,0 +1,67 @@
+#firstArticle{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 1%;
+}
+#teaserSection > a > button{
+    background-color: transparent;
+    font-size: 200%;
+    border-radius: 10em;
+    padding: 1%;
+    border-style: solid;
+    border-color: rgb(81,1,255);;
+    color: rgb(81,1,255);;
+    border-width: 2%;
+    margin-top: 5%;
+    width: 35%;
+    transition: background-color 0.5s, color 0.5s;
+    align-items: center;
+}
+#teaserSection > a > button:hover{
+    background-color: rgb(81,1,255);
+    color: white;
+}
+#teaserSection > a > button:hover #arrowImg{
+    margin-left: 7%;
+}
+#arrowImg{
+    height: 0.7em;
+    margin-left: 5%;
+    transition: margin-left 0.2s;
+}
+#teaserSentence{
+    font-weight:bold;
+    font-size: 550%;
+    line-height: 120%;
+}
+#teaserSentence > a{
+    color: rgb(81,1,255);
+}
+#benefitsArticle{
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    margin-top: 5%;
+}
+#benefitsArticle > section{
+    border-radius: 2em;
+    height: 120%;
+    width: 100%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 2%;
+    text-align: justify;
+    background-color: rgb(240, 243, 248);
+}
+#firstBenefit{
+    
+}
+#firstBenefit > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 8em;
+    border-radius: 50%;
+}
