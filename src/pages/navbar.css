@@ -1,0 +1,50 @@
+#headerNav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(240, 243, 248);
+    padding: 0.5%;
+    border-radius: 10em;
+    margin: 1%;
+	align-items: center;
+    box-shadow: 5px 5px 5px 5px rgb(240, 243, 248);
+}
+#leftNavContainer{
+    display: flex;
+}
+#logo{
+    display: flex;
+    border-radius: 50%;
+    height: 6em;
+}
+#companyName{
+    font-size: 130%;
+    text-decoration: none;
+    margin-left: 2%;
+}
+#leftNavContainer > a{
+    text-decoration: none;
+}
+#headerNav > nav{
+    display: flex;
+    justify-content: flex-end;
+
+    border-radius: 10em;
+    width: 100%;
+    height: 0%;
+    padding: 1%;
+}
+#headerNav > nav > a{
+    text-decoration: none; 
+    font-size: 115%;
+    margin-left: 2%;
+    padding: 0.5%;
+    transition: padding-top 0.3s, text-decoration 0.3s;
+    color: black;
+    font-weight: bold;
+}
+#headerNav > nav > a:hover{
+    padding-top: 0%;
+    color: lightskyblue
+}
+
+  
