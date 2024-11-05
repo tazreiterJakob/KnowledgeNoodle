@@ -11,8 +11,13 @@ function handleRequest(req,res)
 
     if(req.url == "/")req.url = "/"+MAINPAGE;
     PAGE = req.url;
-   
-    let content = fs.readFileSync("pages"+PAGE);
+    if(PAGE.includes(".html")||PAGE.includes(".css"))
+    {
+        content = fs.readFileSync("pages"+PAGE);
+    }else{
+        content = fs.readFileSync("media"+PAGE);
+    }
+
     res.write(content);
 
 
