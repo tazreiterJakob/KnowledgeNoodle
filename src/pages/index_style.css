@@ -44,11 +44,11 @@
     justify-content: space-around;
 
     width: 100%;
+    height: 150%;
     margin-top: 5%;
 }
 #benefitsArticle > section{
     border-radius: 2em;
-    height: 120%;
     width: 100%;
     margin-left: 2.5%;
     margin-right: 2.5%;
@@ -56,7 +56,20 @@
     text-align: justify;
     background-color: rgb(240, 243, 248);
 }
+#benefitsArticle > section > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 8em;
+    border-radius: 50%;
+}
+#benefitsArticle > section > a{
+    font-weight: bold;
+}
 #firstBenefit > img{
+    
+}
+#secondBenefit > img{
     display: block;
     margin-left: auto;
     margin-right: auto;
