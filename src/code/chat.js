@@ -31,12 +31,15 @@ function getAllMessages()
     }
     for (var i = 0; i < cheese.length; i++)
     {
-        console.log(cheese[i]);
-        text ="";
-        text += cheese[i];
-        text= text.split("|")[1];
+        if(cheese.length > 1){
+            console.log(cheese[i]);
+            text ="";
+            text += cheese[i];
+            text= text.split("|")[1];
+    
+            appendMessage(text,localStorage.getItem(cheese[i]));
+        }
 
-        appendMessage(text,localStorage.getItem(cheese[i]));
     }
 }
 
