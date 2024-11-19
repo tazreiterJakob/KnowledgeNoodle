@@ -4,7 +4,7 @@ function submit()
     var text = document.getElementById('messageInput').value;
     createMessage("user",text);
     
-    xhr.open('POST', 'http://127.0.0.1:9000', true);
+    xhr.open('POST', window.location.origin, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function() {
         if (xhr.status === 200) {
