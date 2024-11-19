@@ -1,0 +1,61 @@
+#questionForm{
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    width: 80vw;
+    border-radius: 2em;
+    padding: 1rem;
+    background-color: rgb(240, 243, 248);
+    margin: auto;
+}
+#sendButton{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: auto;
+    background-color: rgb(240, 243, 248);
+}
+#sendButton:hover{
+    padding-top: 0%;
+}
+#sendImage{
+    background-color: transparent;
+    height: 100%;
+    width: auto;
+}
+#questionInput{
+    font-size: 1rem;
+    margin-right: 1rem;
+    background-color: rgb(240, 243, 248);
+    border: none;
+    width: 80%;
+}
+#questionInput:focus{
+    outline: none;
+}
+#chat{
+    width: 80vw;
+    margin: auto;
+    margin-top: 2rem;
+    height: 60vh;
+    overflow: visible;
+}
+#chat > div{
+    width: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.userMessage{
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+    background-color: rgb(240, 243, 248);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    align-self: center;
+}
+.aiMessage{
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+}
