@@ -28,15 +28,22 @@ function handleRequest(req,res)
         });
     }else
     {
-        if(PAGE.includes(".html")||PAGE.includes(".css"))
-        {
-            content = fs.readFileSync("pages"+PAGE);
-        }else if(PAGE.includes(".js")||PAGE.includes(".txt"))
-        {
-            content = fs.readFileSync("code"+PAGE);
-        }else{
-            content = fs.readFileSync("media"+PAGE);
+        try {
+            if(PAGE.includes(".html")||PAGE.includes(".css"))
+            {
+                content = fs.readFileSync("pages"+PAGE);
+            }else if(PAGE.includes(".js")||PAGE.includes(".txt"))
+            {
+                content = fs.readFileSync("code"+PAGE);
+            }else{
+                content = fs.readFileSync("media"+PAGE);
+            }
         }
+        catch (err) {
+            res.statusCode = 404;
+            console.error(err);
+        }
+        
 
         res.write(content);
         res.end();
