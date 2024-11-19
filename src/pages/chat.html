@@ -7,6 +7,7 @@
     <link rel="stylesheet"href="navbar.css">
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="chat.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +21,10 @@
         </a>
 
         <nav>
-                <a href="index.html">Home</a>
+                <a href="index.html">Startseite</a>
                 <a href="tutorial.html">Tutorial</a>
                 <a href="aboutUs.html">Über uns</a>
-                <a href="contact.html">Kontakt</a>
+                <a href="contacts.html">Kontakt</a>
         </nav>
     </header>
     <div id="chat-log">
@@ -34,6 +35,23 @@
         <button onclick="submit()"><img src="../rightArrow.png"/ id="arrowImg"></button>
         <button onclick="clearLocalStorage()">Delete chat Log</button>
     </div>
+
+
+    <section id="main" >
+        <div id="chat">
+            <div class="userMessage" id="usmExample">Ich möchte informationen zu ableitungen haben</div>
+            <div class="aiMessage" id="aimsgExample">Ableitungen sind ein wichtiges Konzept der Analysis in der Mathematik, besonders in der Differentialrechnung. Sie beschreiben die Änderung eines Funktionswertes in Abhängigkeit von der Änderung der Eingabewerte. In der Praxis helfen Ableitungen, Veränderungen, Steigungen und das Verhalten von Funktionen zu analysieren und vorherzusagen.</div>
+        </div>
+
+
+        <div id="questionForm">
+            <input type="text" placeholder="Sende eine Nachricht" id="questionInput">
+            <button id="sendButton">
+                <img src="../media/sendButton.png" alt="send" id="sendImage">
+            </button>
+        </div>
+
+    </section>
 
 
     <div id="footer">

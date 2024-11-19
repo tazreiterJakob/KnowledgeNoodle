@@ -1,4 +1,8 @@
+#OPENAI API-key
 src/key.txt
+
+# gitignore directory
+gitignore
 
 # Logs
 logs
