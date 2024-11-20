@@ -1,8 +1,15 @@
 xhr = new XMLHttpRequest();
+
+
+var verlauf =[];
+verlauf.push({ role: "system",content: "Du heist KnowledgeNoodle, du sollst den user Fragen mit vier Antwortmöglichkeiten über ein angegebenes Thema fragen, wenn du kein Thema bekommst sollst du erlautern das du ein Thema brauchst"});
+
 function submit()
 {
     var text = document.getElementById('messageInput').value;
+    document.getElementById('messageInput').value ="";
     createMessage("user",text);
+    verlauf.push({role:"user",content:text});
     
     xhr.open('POST', 'http://127.0.0.1:9000', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -10,14 +17,15 @@ function submit()
         if (xhr.status === 200) {
             createMessage("KnowledgeNoodle",xhr.responseText);
             console.log('Antwort vom Server:', xhr.responseText);
+            verlauf.push({role:"assistant",content:xhr.responseText});
         } else {
             createMessage( "KnowledgeNoodle","Fehler beim Senden der Daten"+xhr.statusText);
             console.error('Fehler beim Senden der Daten:', xhr.statusText);
         }
     };
-    xhr.send(encodeURIComponent(text));
+    xhr.send(JSON.stringify(verlauf));
 
-    console.log(text);
+    console.log(JSON.stringify(verlauf));
 }
 
 function getAllMessages()
@@ -36,7 +44,12 @@ function getAllMessages()
             text ="";
             text += cheese[i];
             text= text.split("|")[1];
-    
+            if(text == "KnowledgeNoodle")
+            {
+                verlauf.push({role:"assistent",content:localStorage.getItem(cheese[i])});
+            }else{
+                verlauf.push({role:"user",content:localStorage.getItem(cheese[i])});
+            }
             appendMessage(text,localStorage.getItem(cheese[i]));
         }
 
@@ -46,6 +59,9 @@ function getAllMessages()
 function clearLocalStorage()
 {
     localStorage.clear();
+    verlauf = [];
+    verlauf.push({ role: "system",content: "Du heist KnowledgeNoodle, du sollst den user Fragen mit vier Antwortmöglichkeiten über ein angegebenes Thema fragen, wenn du kein Thema bekommst sollst du erlautern das du ein Thema brauchst"});
+
     getAllMessages();
 }
 

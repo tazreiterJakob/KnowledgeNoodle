@@ -5,6 +5,7 @@ const MAINPAGE = "index.html";
 PAGE = MAINPAGE;
 var data ="";
 
+
 function handleRequest(req,res)
 {
     console.log("got request!");
@@ -21,7 +22,7 @@ function handleRequest(req,res)
         req.on('data', async chunk => {
             data += chunk;
             console.log(data);
-            message = await askopenai(data);
+            message = await askopenai(JSON.parse(data));
             console.log(message);
             res.write(message);
             res.end();
@@ -44,7 +45,7 @@ function handleRequest(req,res)
 
 }
 
-async function askopenai(message)
+async function askopenai(verlauf)
 {
     try {
         const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -55,7 +56,7 @@ async function askopenai(message)
             },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo", // Das korrekte Modell für den Chat-Endpunkt
-                messages: [{ role: "user", content: message }], // Verwenden Sie das 'messages'-Format für Chat-Modelle
+                messages: verlauf,
                 max_tokens: 50,
                 temperature: 0.5,
             })
@@ -72,7 +73,6 @@ async function askopenai(message)
             console.log("Unerwartete Antwortstruktur:", data);
             throw new Error("Die Antwort enthält keine 'choices'-Daten.");
         }
- 
         return data.choices[0].message.content.trim();
     } catch (error) {
         console.error("Fehler:", error.message);
