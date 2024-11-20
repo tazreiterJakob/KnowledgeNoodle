@@ -1,6 +1,9 @@
-let http = require('http'),
-    fs = require('fs');
+let http = require('http');
+let fs = require('fs');
+const { Domain } = require('domain');
 
+const DOMAIN = "localhost";
+const PORT = 9000;
 const MAINPAGE = "index.html";
 PAGE = MAINPAGE;
 var data ="";
@@ -11,7 +14,8 @@ function handleRequest(req,res)
     console.log(req.url);
 
     if(req.url == "/")req.url = "/"+MAINPAGE;
-    PAGE = req.url;
+    let url = new URL(req.url, `http://${DOMAIN}:${PORT}/`);
+    PAGE = url.pathname;
 
 
     if (req.method === 'POST') 
@@ -28,6 +32,7 @@ function handleRequest(req,res)
         });
     }else
     {
+        let content;
         try {
             if(PAGE.includes(".html")||PAGE.includes(".css"))
             {
@@ -40,6 +45,7 @@ function handleRequest(req,res)
             }
         }
         catch (err) {
+            content = "resource not found";
             res.statusCode = 404;
             console.error(err);
         }
@@ -88,5 +94,5 @@ async function askopenai(message)
 }
 
 server = http.createServer(handleRequest);
-server.listen(9000);
-console.log("listening at http://127.0.0.1:9000")
+server.listen(PORT);
+console.log(`listening at http://${DOMAIN}:${PORT}`);
