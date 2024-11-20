@@ -4,11 +4,35 @@ article{
     margin-top: 5%;
 }
 article > img{
+<<<<<<< Updated upstream
     width: 40%;
 
+=======
+    height: 19.5rem;
+    border-style: solid;
+    border-radius: 2rem;
+    border-width: 1px;
+>>>>>>> Stashed changes
 }
 section{
     width: 40%;
     text-align: justify;
 }
+<<<<<<< Updated upstream
+=======
+details{
+    font-style: italic;
+}
+details > summary{
+    font-style: normal;
+}
+#dividingLine{
+    width: 80%;
+    margin-top: 5%;
+}
+#FAQquestions{
+    width: 40%;
+    text-align: justify;
+}
+>>>>>>> Stashed changes
 
