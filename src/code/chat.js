@@ -1,6 +1,5 @@
 xhr = new XMLHttpRequest();
 
-
 var verlauf =[];
 verlauf.push({ role: "system",content: "Du heist KnowledgeNoodle, du sollst den user Fragen mit vier Antwortmöglichkeiten über ein angegebenes Thema fragen, wenn du kein Thema bekommst sollst du erlautern das du ein Thema brauchst"});
 
@@ -8,10 +7,11 @@ function submit()
 {
     var text = document.getElementById('messageInput').value;
     document.getElementById('messageInput').value ="";
+    if(text.replace(/ /g,'') == "") return;
     createMessage("user",text);
     verlauf.push({role:"user",content:text});
     
-    xhr.open('POST', 'http://127.0.0.1:9000', true);
+    xhr.open('POST', window.location.origin, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function() {
         if (xhr.status === 200) {
@@ -68,7 +68,16 @@ function clearLocalStorage()
 function appendMessage(teilnehmer,text)
 {
     var chatLog = document.getElementById('chat-log');
-    chatLog.innerHTML += "<p>"+teilnehmer+":"+text+"</p>";
+    if(teilnehmer == "KnowledgeNoodle")
+    {
+        chatLog.innerHTML += "<div class=\"aiMessage\">"+text+"</div>";
+    }else
+    {
+        chatLog.innerHTML += "<div class=\"userMessage\">"+text+"</div>";
+    }
+    var objDiv = document.getElementById("chat-log");
+    objDiv.scrollTop = objDiv.scrollHeight;
+    document.getElementById("messageInput").value = "";
 }
 
 function createMessage(teilnehmer,text)
@@ -77,4 +86,10 @@ function createMessage(teilnehmer,text)
     localStorage.setItem(localStorage.length+"|"+teilnehmer,text);
     appendMessage(teilnehmer,text);
 
+}
+
+function HandleKeyPress(event){
+    if(event.keyCode == 13){
+        submit();
+    }
 }

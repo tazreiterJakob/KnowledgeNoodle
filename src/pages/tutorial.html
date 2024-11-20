@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI Tutor</title>
+    <title>Tutorial</title>
+
     <link rel="stylesheet"href="navbar.css">
+    <link rel="stylesheet" href="tutorial.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="chat.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
 </head>
-<script src="chat.js"></script>
-<body class="poppins-regular" onload="getAllMessages()">
+<body class="poppins-regular">
     <header id="headerNav">     
         <a id="leftNavContainer" href="index.html">
             <img src="../../logo_KnowledgeNoodle.jpg" alt="KnowledgeNoodle logo" id="logo">
@@ -22,32 +22,15 @@
 
         <nav>
                 <a href="index.html">Startseite</a>
-                <a href="tutorial.html">Tutorial</a>
+                <a href="chat.html">KI-Tutor</a>
                 <a href="aboutUs.html">Über uns</a>
                 <a href="contacts.html">Kontakt</a>
         </nav>
     </header>
 
-    <div>
-    </div>
-
-
-    <section id="main" >
-        
-        <div id="chat-log"></div>
-
-
-        <div id="questionForm" onkeydown="HandleKeyPress(event)">
-            <input type="text" placeholder="Sende eine Nachricht" id="messageInput" >
-            <button onclick="clearLocalStorage()" id="deleteChat"><img src="trashCan.png" alt=""></button>
-
-            <button id="sendButton" onclick="submit()">
-                <img src="/sendButton.png" alt="send" id="sendImage">
-            </button>
-        </div>
+    <section id="step1">
 
     </section>
-
 
     <div id="footer">
         <div><a href="">Datenschutz</a></div>
@@ -55,5 +38,4 @@
         <div><a href="">Projektbeschreibung</a></div>
     </div>
 </body>
-
 </html>

@@ -9,6 +9,7 @@
     margin: auto;
 }
 #sendButton{
+    margin-left: 0.1rem;
     background-color: transparent;
     border: none;
     height: 100%;
@@ -16,36 +17,40 @@
     background-color: rgb(240, 243, 248);
 }
 #sendButton:hover{
-    padding-top: 0%;
+    cursor: pointer;
 }
 #sendImage{
     background-color: transparent;
     height: 100%;
     width: auto;
 }
-#questionInput{
+#messageInput{
     font-size: 1rem;
     margin-right: 1rem;
     background-color: rgb(240, 243, 248);
     border: none;
     width: 80%;
 }
-#questionInput:focus{
+#messageInput:focus{
     outline: none;
 }
-#chat{
+#chat-log{
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
     width: 80vw;
     margin: auto;
     margin-top: 2rem;
     height: 60vh;
-    overflow: visible;
 }
-#chat > div{
+#chat-log > div{
     width: fit-content;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    overflow-wrap: anywhere;
 }
 .userMessage{
+    max-width: 80vwx;
     margin-right: 0;
     margin-left: auto;
     text-align: right;
@@ -58,4 +63,19 @@
     margin-left: 0;
     margin-right: auto;
     text-align: left;
+}
+#deleteChat{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: auto;
+    background-color: rgb(240, 243, 248);
+}
+#deleteChat > img{
+    background-color: transparent;
+    height: 100%;
+    width: auto;
+}
+#deleteChat:hover{
+    cursor: pointer;
 }
