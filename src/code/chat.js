@@ -1,7 +1,9 @@
 xhr = new XMLHttpRequest();
+
 function submit()
 {
     var text = document.getElementById('messageInput').value;
+    if(text.replace(/ /g,'') == "") return;
     createMessage("user",text);
     
     xhr.open('POST', 'http://127.0.0.1:9000', true);
@@ -52,7 +54,16 @@ function clearLocalStorage()
 function appendMessage(teilnehmer,text)
 {
     var chatLog = document.getElementById('chat-log');
-    chatLog.innerHTML += "<p>"+teilnehmer+":"+text+"</p>";
+    if(teilnehmer == "KnowledgeNoodle")
+    {
+        chatLog.innerHTML += "<div class=\"aiMessage\">"+text+"</div>";
+    }else
+    {
+        chatLog.innerHTML += "<div class=\"userMessage\">"+text+"</div>";
+    }
+    var objDiv = document.getElementById("chat-log");
+    objDiv.scrollTop = objDiv.scrollHeight;
+    document.getElementById("messageInput").value = "";
 }
 
 function createMessage(teilnehmer,text)
@@ -61,4 +72,10 @@ function createMessage(teilnehmer,text)
     localStorage.setItem(localStorage.length+"|"+teilnehmer,text);
     appendMessage(teilnehmer,text);
 
+}
+
+function HandleKeyPress(event){
+    if(event.keyCode == 13){
+        submit();
+    }
 }
