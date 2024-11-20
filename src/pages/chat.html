@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
-<script src="../chat.js"></script>
+<script src="chat.js"></script>
 <body class="poppins-regular" onload="getAllMessages()">
     <header id="headerNav">     
         <a id="leftNavContainer" href="index.html">
@@ -27,26 +27,22 @@
                 <a href="contacts.html">Kontakt</a>
         </nav>
     </header>
-    <div id="chat-log">
 
-    </div>
     <div>
-        <input type="text" id="messageInput">
-        <button onclick="submit()"><img src="../rightArrow.png"/ id="arrowImg"></button>
-        <button onclick="clearLocalStorage()">Delete chat Log</button>
     </div>
 
 
     <section id="main" >
-        <div id="chat">
-            <div class="userMessage" id="usmExample">Ich möchte informationen zu ableitungen haben</div>
-            <div class="aiMessage" id="aimsgExample">Ableitungen sind ein wichtiges Konzept der Analysis in der Mathematik, besonders in der Differentialrechnung. Sie beschreiben die Änderung eines Funktionswertes in Abhängigkeit von der Änderung der Eingabewerte. In der Praxis helfen Ableitungen, Veränderungen, Steigungen und das Verhalten von Funktionen zu analysieren und vorherzusagen.</div>
-        </div>
         
-        <div id="questionForm">
-            <input type="text" placeholder="Sende eine Nachricht" id="questionInput">
-            <button id="sendButton">
-                <img src="../media/sendButton.png" alt="send" id="sendImage">
+        <div id="chat-log"></div>
+
+
+        <div id="questionForm" onkeydown="HandleKeyPress(event)">
+            <input type="text" placeholder="Sende eine Nachricht" id="messageInput" >
+            <button onclick="clearLocalStorage()" id="deleteChat"><img src="trashCan.png" alt=""></button>
+
+            <button id="sendButton" onclick="submit()">
+                <img src="/sendButton.png" alt="send" id="sendImage">
             </button>
         </div>
 
