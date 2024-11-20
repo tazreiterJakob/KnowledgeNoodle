@@ -1,0 +1,14 @@
+article{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+article > img{
+    width: 40%;
+
+}
+section{
+    width: 40%;
+    text-align: justify;
+}
+
