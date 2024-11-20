@@ -1,7 +1,7 @@
 xhr = new XMLHttpRequest();
 
 var verlauf =[];
-verlauf.push({ role: "system",content: "Du heist KnowledgeNoodle, du sollst den user Fragen mit vier Antwortmöglichkeiten über ein angegebenes Thema fragen, wenn du kein Thema bekommst sollst du erlautern das du ein Thema brauchst"});
+verlauf.push({ role: "system",content: "Du heist KnowledgeNoodle, du sollst den user Fragen mit vier Antwortmöglichkeiten über ein angegebenes Thema fragen, auch sollst du falls gefragt das Thema erklären"});
 
 function submit()
 {
@@ -60,8 +60,7 @@ function clearLocalStorage()
 {
     localStorage.clear();
     verlauf = [];
-    verlauf.push({ role: "system",content: "Du heist KnowledgeNoodle, du sollst den user Fragen mit vier Antwortmöglichkeiten über ein angegebenes Thema fragen, wenn du kein Thema bekommst sollst du erlautern das du ein Thema brauchst"});
-
+    verlauf.push({ role: "system",content: "Du heist KnowledgeNoodle, du bist ein KI-Tutor, du sollst den user Fragen mit vier Antwortmöglichkeiten über ein angegebenes Thema fragen, auch sollst du falls gefragt das Thema erklären"});
     getAllMessages();
 }
 
