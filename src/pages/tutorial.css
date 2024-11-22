@@ -1,0 +1,30 @@
+article{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+article > img{
+    height: 19.5rem;
+    border-style: solid;
+    border-radius: 2rem;
+    border-width: 1px;
+}
+section{
+    width: 40%;
+    text-align: justify;
+}
+details{
+    font-style: italic;
+}
+details > summary{
+    font-style: normal;
+}
+#dividingLine{
+    width: 80%;
+    margin-top: 5%;
+}
+#FAQquestions{
+    width: 40%;
+    text-align: justify;
+}
+
