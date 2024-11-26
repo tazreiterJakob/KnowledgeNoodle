@@ -10,7 +10,8 @@ article > img{
     border-width: 1px;
 }
 section{
-    width: 40%;
+    margin-left: 2%;
+    margin-right: 2%;
     text-align: justify;
 }
 details{
