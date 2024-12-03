@@ -1,5 +1,8 @@
-#OPENAI API-key
+# OPENAI API-key
 src/key.txt
+
+# Messages
+messages
 
 # gitignore directory
 gitignore

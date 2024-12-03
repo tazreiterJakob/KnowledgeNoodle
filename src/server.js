@@ -1,6 +1,7 @@
 let http = require('http');
 let fs = require('fs');
 const { Domain } = require('domain');
+const { timeStamp } = require('console');
 
 const DOMAIN = "localhost";
 const PORT = 9000;
@@ -35,6 +36,16 @@ function handleRequest(req,res)
     {
         let content;
         try {
+            // got message
+            if(PAGE == "/contacts_sent.html") {
+                console.log("got message!");
+                let message = "Name: " + url.searchParams.get("name")
+                    + "\nE-Mail: " + url.searchParams.get("email")
+                    + "\nSubject: " + url.searchParams.get("subject")
+                    + "\n\n" + url.searchParams.get("description");
+
+                fs.writeFileSync("../messages/" + Date.now() + ".txt", message);
+            }
             if(PAGE.includes(".html")||PAGE.includes(".css"))
             {
                 content = fs.readFileSync("pages"+PAGE);
