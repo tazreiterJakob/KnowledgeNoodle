@@ -7,6 +7,13 @@ A simple AI-Tutor
 [Trello-Board](https://trello.com/b/f0EG87VE/knowledgenoodle)
 
 
+## Setup
+- make shure you have node.js installed and configured
+- clone the repo
+- create a "key.txt"-file in the "src" directory and paste your OpenAI-API-Key in it
+- run src/server.js with node
+
+
 ## Team Members
 - Brandstetter Fabian ([@BrandstetterFabian](https://github.com/BrandstetterFabian)) - Frontend
 - Schmölz Felix ([@schmoelzFelix](https://github.com/schmoelzFelix)) - Backend
