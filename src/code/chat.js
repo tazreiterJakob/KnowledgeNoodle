@@ -46,7 +46,7 @@ function getAllMessages()
             text= text.split("|")[1];
             if(text == "KnowledgeNoodle")
             {
-                verlauf.push({role:"assistent",content:localStorage.getItem(cheese[i])});
+                verlauf.push({role:"assistant",content:localStorage.getItem(cheese[i])});
             }else{
                 verlauf.push({role:"user",content:localStorage.getItem(cheese[i])});
             }
